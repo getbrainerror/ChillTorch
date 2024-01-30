@@ -23,7 +23,8 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew assembleRelease 
+      run: |
+        ./gradlew assembleRelease 
         mkdir -p build/outputs
         mv app/build/outputs/apk/release/app-release.apk build/outputs/
       # You can add additional steps here, such as running tests or other build-related tasks
