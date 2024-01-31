@@ -15,7 +15,14 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    signingConfigs {
+        release {
+            storeFile file('Pfad/zu/deinem_keystore/dein_keystore_name.keystore')
+            storePassword 'dein_keystore_passwort'
+            keyAlias 'dein_alias_name'
+            keyPassword 'dein_alias_passwort'
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false

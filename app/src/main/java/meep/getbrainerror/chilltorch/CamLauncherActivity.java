@@ -19,24 +19,23 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.preference.PreferenceManager;
 
-import meep.getbrainerror.chilltorch.databinding.ActivityCamLauncherBinding;
 
 public class CamLauncherActivity extends AppCompatActivity {
 
-
+    SharedPreferences appPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        SharedPreferences appPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-        String torch_vfs = appPreferences.getString("pref_torch_vfs","torch-light0");
-        String brightness = appPreferences.getString("pref_torch_brightness","1");
-        Utils.ToggleTorch(torch_vfs,brightness);
+        appPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        String torch_vfs = appPreferences.getString("pref_torch_vfs", "torch-light0");
+        String brightness = appPreferences.getString("pref_torch_brightness", "1");
+        Utils.ToggleTorch(torch_vfs, brightness);
         this.finishAffinity();
     }
-
 
 
 }
