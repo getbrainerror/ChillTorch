@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewSettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- Torch VFS -->
+        <TextView
+            android:id="@+id/settingsNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Torch VFS"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/settingsDescriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Example for ruby:\ntorch-light0"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/currentValueEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:inputType="textNoSuggestions"
+            android:text="torch-light0" />
+
+        <!-- Max Brightness -->
+
+        <Button
+            android:id="@+id/buttonSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="44dp"
+            android:layout_marginStart="16dp"
+            android:text="Auto Detect"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/settingsNameTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Max Brightness"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/settingsDescriptionTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Set your maximum. \n!!!Be careful!!!\n!!!Too high values can permanently destroy your device!!!"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/currentValueEditText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:inputType="numberDecimal"
+            android:text="6" />
+
+        <!-- Default Brightness -->
+        <TextView
+            android:id="@+id/settingsNameTextView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Default Brightness"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/settingsDescriptionTextView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Default Brightness. Used for camera button, qs tile, and first value when starting the app."
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/currentValueEditText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:inputType="numberDecimal"
+            android:text="3" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

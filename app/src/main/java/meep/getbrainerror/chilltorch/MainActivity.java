@@ -70,7 +70,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onSettingsButtonClick(View view) {
-        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+        //Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+        Intent intent = new Intent(MainActivity.this, NewSettingsActivity.class);
         startActivity(intent);
     }
 
