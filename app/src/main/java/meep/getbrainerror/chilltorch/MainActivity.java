@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        appPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
 
@@ -46,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
                 Utils.SetTorchBrightness(torch_vfs, String.valueOf(progress));
             }
         });
-        appPreferences = PreferenceManager.getDefaultSharedPreferences(this);
     }
 
 
